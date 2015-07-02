@@ -32,6 +32,8 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid @medium-gray;
+  width: 25%;
+  margin: 2em auto;
 }
 
 blockquote {
@@ -52,7 +54,6 @@ blockquote {
 
   & > * {
     flex: 0 1 auto;
-    // background: red;
   }
 
   .main-menu {
@@ -92,6 +93,8 @@ blockquote {
 
 .post-header {
   text-align: center;
+  margin-bottom: 1.5em;
+
   h1 {
     font-size: 2.5em;
     line-height: 1.3em;
@@ -105,25 +108,44 @@ blockquote {
 }
 
 .post-footer {
-  max-width: 50%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5em;
-  &::before {
-    content: '~';
-    font-size: 1.8em;
-    color: @medium-gray;
+}
+
+.post-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-nav-item {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.prev {
+    text-align: right;
+  }
+  &.next {
+    text-align: left;
+  }
+  &.prev:last-child, &.next:first-child {
+    width: 100%;
+    text-align: center;
   }
 }
 
-.post:before {
-    content: '~';
-    font-size: 1.8em;
-    color: @medium-gray;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
+
+.post-nav-item + .post-nav-item:before {
+  // content: '–\00a0';
+}
+
+.post {
+  margin-top: 3em;
 }
 
 .post img {
@@ -131,6 +153,6 @@ blockquote {
   margin: 0 auto;
 }
 
-.post + .post {
-  margin-top: 3em;
+.post-content hr {
+  width: 10%;
 }

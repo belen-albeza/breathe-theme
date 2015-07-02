@@ -379,6 +379,8 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid #cccccc;
+  width: 25%;
+  margin: 2em auto;
 }
 blockquote {
   border-left: 2px solid #cccccc;
@@ -426,6 +428,7 @@ blockquote {
 }
 .post-header {
   text-align: center;
+  margin-bottom: 1.5em;
 }
 .post-header h1 {
   font-size: 2.5em;
@@ -437,29 +440,42 @@ blockquote {
   border: none;
 }
 .post-footer {
-  max-width: 50%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5em;
 }
-.post-footer::before {
-  content: '~';
-  font-size: 1.8em;
-  color: #cccccc;
+.post-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.post:before {
-  content: '~';
-  font-size: 1.8em;
-  color: #cccccc;
-  text-align: center;
+.post-nav-item {
+  flex: 0 0 auto;
   display: inline-block;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.post-nav-item.prev {
+  text-align: right;
+}
+.post-nav-item.next {
+  text-align: left;
+}
+.post-nav-item.prev:last-child,
+.post-nav-item.next:first-child {
   width: 100%;
+  text-align: center;
+}
+.post {
+  margin-top: 3em;
 }
 .post img {
   display: block;
   margin: 0 auto;
 }
-.post + .post {
-  margin-top: 3em;
+.post-content hr {
+  width: 10%;
 }
