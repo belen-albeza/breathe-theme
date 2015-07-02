@@ -22,8 +22,10 @@
 <body class="{{body_class}}">
 <div class="main-wrapper">
   <header class="main-header">
-    <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-    <p>{{@blog.description}}</p>
+    <div class="title-wrapper">
+      <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      <p>{{@blog.description}}</p>
+    </div><!-- title wrapper -->
 
     <nav class="main-menu">
       {{navigation}}
@@ -36,6 +38,7 @@
   </main>
 
   <footer class="main-footer">
+    <nav class="main-menu">{{navigation}}</nav>
     <p><a href="{{@blog.url}}/rss/">Subscribe to RSS</a> updates.</p>
     <p>© {{date format="YYYY"}} {{@blog.title}}. All rights reserved.<br>
       Powered with <a href="https://www.ghost.org">Ghost</a> and the
