@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  {{! document settings }}
+  <meta charset="utf-8">
+  {{! mobile friendly }}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{! page meta }}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}">
+
+  {{! feed, styles, etc. }}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{@blog.url}}/rss/">
+  <link rel="stylesheet" href="{{asset "css/main.css"}}">
+
+  {{! ghost stuff - don't remove this! }}
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+<div class="main-wrapper">
+  <header class="main-header">
+    <div class="title-wrapper">
+      <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      <p>{{@blog.description}}</p>
+    </div><!-- title wrapper -->
+
+    <nav class="main-menu">
+      {{navigation}}
+    </nav>
+  </header>
+
+  <main>
+  {{! everything else gets inserted here }}
+  {{{body}}}
+  </main>
+
+  <footer class="main-footer">
+    <nav class="main-menu">{{navigation}}</nav>
+    <p><a href="{{@blog.url}}/rss/">Subscribe to RSS</a> updates.</p>
+    <p>© {{date format="YYYY"}} {{@blog.title}}. All rights reserved.<br>
+      Powered with <a href="https://www.ghost.org">Ghost</a> and the
+      <a href="https://www.github.com/belen-albeza/breathe-theme">Breathe</a> theme.
+    </p>
+  </footer>
+  {{! ghost stuff - don't remove this! }}
+  {{ghost_foot}}
+</div>{{! main wrapper }}
+</body>
+</html>

@@ -1,0 +1,158 @@
+@import '_normalize';
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,700,400italic);
+
+@white: #fff;
+@black: #333;
+@black-light: #666;
+@black-shade: #000;
+@medium-gray: #ccc;
+@medium-gray-shade: #999;
+
+body {
+  background: @white;
+  color: @black;
+  font-family: Cardo, Gerogia, serif;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: @black-shade;
+  text-decoration: none;
+  border-bottom: 1px solid @medium-gray;
+  &:hover {
+    color: @black-shade;
+    background: lighten(#FCF6E3, 2%);
+  }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid @medium-gray;
+  width: 25%;
+  margin: 2em auto;
+}
+
+blockquote {
+  border-left: 2px solid @medium-gray;
+  padding: 0.1em 1em;
+  margin-left: 0.75em;
+}
+
+.main-wrapper {
+  max-width: 42em;
+  margin: 0 auto;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & > * {
+    flex: 0 1 auto;
+  }
+
+  .main-menu {
+    align-self: center;
+  }
+
+  h1 {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0;
+    & + * {
+      margin-top: 0;
+    }
+  }
+}
+
+.main-menu {
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 0.5em;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.main-footer {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 1.5em;
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+
+  .permalink {
+    border: none;
+  }
+}
+
+.post-footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+}
+
+.post-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-nav-item {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.prev {
+    text-align: right;
+  }
+  &.next {
+    text-align: left;
+  }
+  &.prev:last-child, &.next:first-child {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.post-nav-item + .post-nav-item:before {
+  // content: '–\00a0';
+}
+
+.post {
+  margin-top: 3em;
+}
+
+.post img {
+  display: block;
+  margin: 0 auto;
+}
+
+.post-content hr {
+  width: 10%;
+}

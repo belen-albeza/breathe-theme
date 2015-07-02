@@ -1,0 +1,29 @@
+{
+  "name": "breathe-theme",
+  "version": "1.0.0",
+  "description": "Minimalist theme for Ghost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belen-albeza/breathe-theme.git"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "blog"
+  ],
+  "author": "Belén \"Benko\" Albeza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/belen-albeza/breathe-theme/issues"
+  },
+  "homepage": "https://github.com/belen-albeza/breathe-theme#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-sourcemaps": "^1.5.2"
+  }
+}

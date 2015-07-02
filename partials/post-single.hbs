@@ -1,0 +1,23 @@
+<article class="{{post_class}}">
+  <header class="post-header">
+    <h1><a href="{{url}}" class="permalink">{{title}}</a></h1>
+    <p class="post-meta">By <span class="author">{{author.name}}</span></p>
+  </header>
+
+  <div class="post-content">
+  {{content}}
+  </div>
+
+  <hr>
+
+  <footer class="post-footer">
+    <p>Posted on
+      <time class="post-time" datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>.
+      <a href="{{url}}" class="permalink">Permalink</a>.
+    </p>
+    <nav class="post-nav">
+      {{#prev_post}}<span class="post-nav-item prev">Previous: <a href="{{url}}">{{title}}</a></span>{{/prev_post}}
+      {{#next_post}}<span class="post-nav-item next">Next: <a href="{{url}}">{{title}}</a></span>{{/next_post}}
+    </nav>
+  </footer>
+</article>
