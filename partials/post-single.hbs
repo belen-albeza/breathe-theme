@@ -8,6 +8,7 @@
   {{content}}
   </div>
 
+  {{^is "page"}}
   <hr>
 
   <footer class="post-footer">
@@ -20,4 +21,5 @@
       {{#next_post}}<span class="post-nav-item next">Next: <a href="{{url}}">{{title}}</a></span>{{/next_post}}
     </nav>
   </footer>
+  {{/is}}
 </article>

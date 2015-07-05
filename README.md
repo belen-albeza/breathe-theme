@@ -33,6 +33,8 @@ This theme does _not_ display:
 
 ## Changelog
 
+- **1.0.1**
+  - Fix pagination showing up in static pages
 - **1.0.0**
   - First version
 
